@@ -1,5 +1,5 @@
 {
-  "name": "babel-plugin-esm-pikacdn",
+  "name": "@favi_ty/babel-plugin-esm-pikacdn",
   "version": "1.0.0",
   "main": "index.js",
   "author": "favi_ty <favius983@gmail.com>",
