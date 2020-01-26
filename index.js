@@ -14,7 +14,7 @@ function isModulePath(srcPath) {
 
 function getImportMap(dir = "web_modules") {
   const filepath = path.resolve(process.cwd(), dir, "import-map.json");
-  const ImportMap = requre(filepath);
+  const ImportMap = require(filepath);
   return Object.keys(ImportMap.imports);
 }
 
@@ -32,6 +32,7 @@ function rewriteImport(imp) {
 module.exports = function pikaWebBabelTransform({ types: t }, { dir } = {}) {
   const modules = getImportMap(dir);
   return {
+    name: "babal-plugin-esm-pikacdn",
     visitor: {
       ImportDeclaration(path) {
         const srcPath = path.node.source.value;
