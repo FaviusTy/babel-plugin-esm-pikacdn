@@ -4,9 +4,9 @@ const finder = require("find-package-json");
 function isModulePath(srcPath) {
   if (
     srcPath[0] === "." ||
+    srcPath[0] === "/" ||
     srcPath.startsWith("http:") ||
-    srcPath.startsWith("https:") ||
-    srcPath.startsWith("/")
+    srcPath.startsWith("https:")
   )
     return false;
   return true;
