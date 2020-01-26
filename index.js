@@ -20,9 +20,15 @@ function getImportMap(dir = "web_modules") {
 
 function getPackageVersion(packageName) {
   const modulesPath = process.cwd() + "/node_modules";
-  const entryPointPath = require.resolve(packageName, { paths: [modulesPath] });
-  const json = finder(entryPointPath).next().value;
-  return json.version;
+  try {
+    const entryPointPath = require.resolve(packageName, {
+      paths: [modulesPath]
+    });
+    const json = finder(entryPointPath).next().value || { version: "" };
+    return json.version;
+  } catch {
+    return "";
+  }
 }
 
 function rewriteImport(imp) {

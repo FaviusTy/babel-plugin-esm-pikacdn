@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "mitt": "",
+    "@favi_ty/either": "",
+    "reframe.js": "",
+    "none-module": ""
+  }
+}
