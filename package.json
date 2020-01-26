@@ -1,0 +1,22 @@
+{
+  "name": "babel-plugin-esm-pikacdn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "favi_ty <favius983@gmail.com>",
+  "license": "WTFPL",
+  "devDependencies": {
+    "babel-plugin-tester": "8.0.1",
+    "common-tags": "1.8.0",
+    "jest": "25.1.0",
+    "np": "5.2.1"
+  },
+  "dependencies": {
+    "find-package-json": "1.2.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
