@@ -2,7 +2,7 @@
   "imports": {
     "mitt": "",
     "@favi_ty/either": "",
-    "reframe.js": "",
+    "reframe": "",
     "none-module": ""
   }
 }

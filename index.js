@@ -1,6 +1,8 @@
 const path = require("path");
 const finder = require("find-package-json");
 
+const { parse, join } = path;
+
 function isModulePath(srcPath) {
   if (
     srcPath[0] === "." ||
@@ -42,13 +44,17 @@ module.exports = function pikaWebBabelTransform({ types: t }, { dir } = {}) {
     visitor: {
       ImportDeclaration(path) {
         const srcPath = path.node.source.value;
-        if (!isModulePath(srcPath) || !modules.includes(srcPath)) return;
+        if (!isModulePath(srcPath)) return;
+        const { dir, name } = parse(srcPath);
+        if (!modules.includes(join(dir, name))) return;
         path.node.source = t.stringLiteral(rewriteImport(srcPath));
       },
       CallExpression(path) {
         if (!t.isImport(path.node.callee)) return;
         const srcPath = path.node.arguments[0].value;
-        if (!isModulePath(srcPath) || !modules.includes(srcPath)) return;
+        if (!isModulePath(srcPath)) return;
+        const { dir, name } = parse(srcPath);
+        if (!modules.includes(join(dir, name))) return;
         path.node.arguments = [t.stringLiteral(rewriteImport(srcPath))];
       }
     }
