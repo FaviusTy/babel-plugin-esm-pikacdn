@@ -1,6 +1,6 @@
 {
   "name": "@favi_ty/babel-plugin-esm-pikacdn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "author": "favi_ty <favius983@gmail.com>",
   "license": "WTFPL",
