@@ -49,6 +49,20 @@ module.exports = function pikaWebBabelTransform({ types: t }, { dir } = {}) {
         if (!modules.includes(join(dir, name))) return;
         path.node.source = t.stringLiteral(rewriteImport(srcPath));
       },
+      ExportAllDeclaration(path) {
+        const srcPath = path.node.source.value;
+        if (!isModulePath(srcPath)) return;
+        const { dir, name } = parse(srcPath);
+        if (!modules.includes(join(dir, name))) return;
+        path.node.source = t.stringLiteral(rewriteImport(srcPath));
+      },
+      ExportNamedDeclaration(path) {
+        const srcPath = path.node.source ? path.node.source.value : null;
+        if (!srcPath || !isModulePath(srcPath)) return;
+        const { dir, name } = parse(srcPath);
+        if (!modules.includes(join(dir, name))) return;
+        path.node.source = t.stringLiteral(rewriteImport(srcPath));
+      },
       CallExpression(path) {
         if (!t.isImport(path.node.callee)) return;
         const srcPath = path.node.arguments[0].value;
