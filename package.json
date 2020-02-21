@@ -10,7 +10,7 @@
     "common-tags": "1.8.0",
     "jest": "25.1.0",
     "mitt": "1.2.0",
-    "np": "5.2.1",
+    "np": "6.1.0",
     "reframe.js": "2.2.7"
   },
   "dependencies": {
