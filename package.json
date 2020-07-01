@@ -6,7 +6,7 @@
   "license": "WTFPL",
   "devDependencies": {
     "@favi_ty/either": "1.0.0",
-    "babel-plugin-tester": "8.0.1",
+    "babel-plugin-tester": "9.2.0",
     "common-tags": "1.8.0",
     "jest": "25.1.0",
     "mitt": "1.2.0",
