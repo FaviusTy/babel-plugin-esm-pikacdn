@@ -3748,10 +3748,10 @@ redent@^3.0.0:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
 
-reframe.js@2.2.7:
-  version "2.2.7"
-  resolved "https://registry.yarnpkg.com/reframe.js/-/reframe.js-2.2.7.tgz#2589b72e2d3185663351a82533061d4b77e63cb6"
-  integrity sha512-Ix85bPpPFVczgOoxBQX09iWZmZ1kK6YzdunrFFpXr9P8JF24DTJc9VrEwkT54qpZTYKci60dGSz9F8+mVYPceA==
+reframe.js@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/reframe.js/-/reframe.js-3.0.2.tgz#8c97c591f3c3266f74a1baf6d7261e4224f51bc0"
+  integrity sha512-R39DRjAdwwsKeBBue1VukDktqdjfP8SFvZk/FtXtELC3Axutvk48VIrhj0IRK2nW1impTeDJKBKTm9smy+P90w==
 
 regenerator-runtime@^0.13.2:
   version "0.13.3"
