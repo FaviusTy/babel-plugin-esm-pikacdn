@@ -9,7 +9,7 @@
     "babel-plugin-tester": "8.0.1",
     "common-tags": "1.8.0",
     "jest": "25.1.0",
-    "mitt": "1.2.0",
+    "mitt": "3.0.1",
     "np": "6.1.0",
     "reframe.js": "2.2.7"
   },
