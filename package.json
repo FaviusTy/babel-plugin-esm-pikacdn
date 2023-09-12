@@ -8,7 +8,7 @@
     "@favi_ty/either": "1.0.0",
     "babel-plugin-tester": "8.0.1",
     "common-tags": "1.8.0",
-    "jest": "25.1.0",
+    "jest": "29.7.0",
     "mitt": "1.2.0",
     "np": "6.1.0",
     "reframe.js": "2.2.7"
